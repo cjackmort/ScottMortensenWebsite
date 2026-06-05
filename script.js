@@ -115,17 +115,44 @@ filterBtns.forEach(btn => {
 
 // ── Contact form ──
 const form = document.getElementById('contactForm');
-const success = document.getElementById('formSuccess');
+const formSuccess = document.getElementById('formSuccess');
 
 if (form) {
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Sending…';
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending...';
     btn.disabled = true;
-    setTimeout(() => {
-      form.style.display = 'none';
-      success.classList.add('visible');
-    }, 1100);
+
+    const data = {
+      firstName: form.elements['firstName'].value,
+      lastName: form.elements['lastName'].value,
+      email: form.elements['email'].value,
+      inquiryType: form.elements['inquiryType'].value,
+      message: form.elements['message'].value,
+    };
+
+    try {
+      const res = await fetch('https://formspree.io/f/mlgkdwyd', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        form.style.display = 'none';
+        formSuccess.classList.add('visible');
+      } else {
+        throw new Error('non-ok response');
+      }
+    } catch {
+      alert('Something went wrong — please email scottmortensenfinearts@gmail.com directly');
+      btn.textContent = originalText;
+      btn.disabled = false;
+    }
   });
 }

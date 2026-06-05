@@ -325,20 +325,20 @@
           <div class="form-row2">
             <div class="form-field">
               <label>First Name</label>
-              <input type="text" placeholder="John" required>
+              <input type="text" name="firstName" placeholder="John" required>
             </div>
             <div class="form-field">
               <label>Last Name</label>
-              <input type="text" placeholder="Doe" required>
+              <input type="text" name="lastName" placeholder="Doe" required>
             </div>
           </div>
           <div class="form-field">
             <label>Email Address</label>
-            <input type="email" placeholder="john@example.com" required>
+            <input type="email" name="email" placeholder="john@example.com" required>
           </div>
           <div class="form-field">
             <label>Inquiry Type</label>
-            <select>
+            <select name="inquiryType">
               <option value="">Select a subject...</option>
               <option>Commission Inquiry</option>
               <option>Available Works</option>
@@ -348,7 +348,7 @@
           </div>
           <div class="form-field">
             <label>Message</label>
-            <textarea rows="5" placeholder="Tell me about the piece you have in mind..." required></textarea>
+            <textarea name="message" rows="5" placeholder="Tell me about the piece you have in mind..." required></textarea>
           </div>
           <button type="submit" class="btn btn-gold full-w">Send Message</button>
           <p class="form-note">Scott typically responds within 2–3 business days.</p>
