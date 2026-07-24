@@ -13,6 +13,8 @@
   --gold:     #C8952A;
   --gold2:    #E0AA48;
   --gold3:    #F5C96A;
+  --copper:   #D4894E;
+  --copper2:  #E8A060;
   --cream:    #F4ECD8;
   --muted:    #8A7D6B;
   --muted2:   #5A5148;
@@ -126,10 +128,10 @@ body:hover .cursor { opacity: 1; }
 .btn:hover::before { transform: translateX(0); }
 
 .btn-gold {
-  background: var(--gold);
+  background: var(--copper);
   color: var(--bg);
 }
-.btn-gold:hover { background: var(--gold2); }
+.btn-gold:hover { background: var(--copper2); }
 
 .btn-ghost {
   background: transparent;
@@ -226,13 +228,13 @@ body:hover .cursor { opacity: 1; }
 .nav-link:hover::after { transform: scaleX(1); transform-origin: left; }
 
 .nav-cta {
-  background: var(--gold); color: var(--bg) !important;
+  background: var(--copper); color: var(--bg) !important;
   padding: 10px 24px; border-radius: 2px;
   font-weight: 600; letter-spacing: 0.18em;
   transition: background 0.3s !important;
 }
 .nav-cta::after { display: none; }
-.nav-cta:hover { background: var(--gold2) !important; }
+.nav-cta:hover { background: var(--copper2) !important; }
 
 .nav-hamburger {
   display: none; flex-direction: column;
