@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scott Mortensen Fine Arts | Western Wildlife Bronze Sculpture</title>
+  <meta name="description" content="Scott Mortensen creates intricate western wildlife bronze sculptures capturing the spirit of the American West.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- PRELOADER (like Lando's "LOAD NORRIS" intro screen) -->
+  <div class="preloader" id="preloader">
+    <div class="pl-inner">
+      <div class="pl-initials">SM</div>
+      <div class="pl-bar"><div class="pl-fill"></div></div>
+      <div class="pl-label">Scott Mortensen Fine Arts</div>
+    </div>
+  </div>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand">
+        <img src="../Photos/CoinLogo.JPG" alt="Scott Mortensen Logo" class="nav-logo-img">
+        <div class="brand-text">
+          <span class="brand-name">Scott Mortensen</span>
+          <span class="brand-sub">Fine Arts</span>
+        </div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#contact" class="nav-link nav-cta">Commission</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#gallery" class="mobile-link">Gallery</a>
+      <a href="#process" class="mobile-link">Process</a>
+      <a href="#contact" class="mobile-link">Commission</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CINEMATIC HERO — Black BG · Animated brown lines · Indian
+       sculpture revealed behind title (Lando-style upward wipe)
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="hero-cinematic" id="home">
+    <!-- Canvas: flowing brown lines on black -->
+    <canvas class="hc-canvas" id="hcCanvas"></canvas>
+
+    <!-- Indian sculpture — slides up from below on load -->
+    <div class="hc-sculpture" id="hcSculpture"
+         style="background-image:url('../Photos/Indian.JPG')"></div>
+
+    <!-- Gradient vignette: blends sculpture left + top + bottom into black -->
+    <div class="hc-vignette"></div>
+
+    <!-- Title: always on top, left side -->
+    <div class="hc-title-wrap">
+      <div class="hc-eyebrow-row" data-hero-anim="0">
+        <span class="h-line"></span>
+        <span class="hc-eyebrow">Western Wildlife Sculpture</span>
+        <span class="h-line"></span>
+      </div>
+      <h1 class="hc-big-title">
+        <span class="ht-line"><em>Scott</em></span>
+        <span class="ht-line"><strong>Mortensen</strong></span>
+      </h1>
+      <p class="hc-subtitle" data-hero-anim="2">Capturing the Spirit of the American West in Bronze</p>
+      <div class="hc-actions" data-hero-anim="3">
+        <a href="#gallery" class="btn btn-gold">View Gallery</a>
+        <a href="#about" class="btn btn-ghost">Meet the Artist</a>
+      </div>
+    </div>
+
+    <div class="scroll-ind">
+      <div class="scroll-track"><div class="scroll-thumb"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Bronze Sculpture</span><span class="dot">◆</span>
+      <span>Wildlife Art</span><span class="dot">◆</span>
+      <span>Western Heritage</span><span class="dot">◆</span>
+      <span>Lost-Wax Casting</span><span class="dot">◆</span>
+      <span>Limited Editions</span><span class="dot">◆</span>
+      <span>Custom Commissions</span><span class="dot">◆</span>
+      <span>Bronze Sculpture</span><span class="dot">◆</span>
+      <span>Wildlife Art</span><span class="dot">◆</span>
+      <span>Western Heritage</span><span class="dot">◆</span>
+      <span>Lost-Wax Casting</span><span class="dot">◆</span>
+      <span>Limited Editions</span><span class="dot">◆</span>
+      <span>Custom Commissions</span><span class="dot">◆</span>
+      <span>Bronze Sculpture</span><span class="dot">◆</span>
+      <span>Wildlife Art</span><span class="dot">◆</span>
+      <span>Western Heritage</span><span class="dot">◆</span>
+      <span>Lost-Wax Casting</span><span class="dot">◆</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-visual" data-reveal>
+        <div class="about-frame">
+          <div class="about-img" style="background-image:url('../Photos/ScottPortait.jpg')"></div>
+          <div class="about-frame-border"></div>
+        </div>
+        <div class="about-badge">
+          <span class="badge-num" data-count="5">0</span>
+          <span class="badge-plus">+</span>
+          <span class="badge-lbl">Years<br>of Craft</span>
+        </div>
+      </div>
+      <div class="about-text" data-reveal>
+        <p class="eyebrow">The Artist</p>
+        <h2 class="section-h2">Scott<br><em>Mortensen</em></h2>
+        <p class="about-tagline">Sculptor · Storyteller · Son of the West</p>
+        <p class="body-text">Scott Mortensen is a celebrated western art sculptor whose intricate wildlife pieces have captivated collectors and galleries across the country. With a deep reverence for the American West and its untamed landscapes, Scott brings to life the spirit of the wild — from powerful bison and soaring eagles to the quiet dignity of Native American heritage.</p>
+        <p class="body-text">Each sculpture begins as a labor of love: meticulously sculpted in wax or clay, then cast in bronze using the age-old lost-wax process. The result is a timeless work of art that carries the weight and warmth of the land that inspired it.</p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <div class="stat-val"><span class="stat-num" data-count="50">0</span><span class="stat-plus">+</span></div>
+            <span class="stat-lbl">Works Created</span>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val"><span class="stat-num" data-count="5">0</span><span class="stat-plus">+</span></div>
+            <span class="stat-lbl">Exhibitions</span>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val"><span class="stat-num" data-count="5">0</span></div>
+            <span class="stat-lbl">States</span>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-gold">Commission a Piece</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-inner">
+      <div class="section-header" data-reveal>
+        <p class="eyebrow center">Portfolio</p>
+        <h2 class="section-h2 center">The Work</h2>
+        <p class="section-sub center">Each piece tells the story of the West — its wildlife, its people, its enduring spirit.</p>
+      </div>
+      <div class="gallery-filters" data-reveal>
+        <button class="filter-btn active" data-filter="all">All Works</button>
+        <button class="filter-btn" data-filter="wildlife">Wildlife</button>
+        <button class="filter-btn" data-filter="western">Western</button>
+        <button class="filter-btn" data-filter="coatrack">Coat Racks</button>
+        <button class="filter-btn" data-filter="native">Native Heritage</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- Row 1: Full-width feature + small -->
+        <div class="g-item g-feature" data-cat="wildlife">
+          <div class="g-img" style="background-image:url('../Photos/LionDrinking.JPEG')"></div>
+          <div class="g-overlay">
+            <span class="g-cat">Wildlife</span>
+            <h3>Lion at the Water</h3>
+            <p>Patinated Bronze · Limited Edition</p>
+          </div>
+        </div>
+
+        <div class="g-item g-tall" data-cat="native">
+          <div class="g-img" style="background-image:url('../Photos/Indian.JPG')"></div>
+          <div class="g-overlay">
+            <span class="g-cat">Native Heritage</span>
+            <h3>Spirit of the Plains</h3>
+            <p>Bronze · Limited Edition</p>
+          </div>
+        </div>
+
+        <div class="g-item g-tall" data-cat="wildlife">
+          <div class="g-img" style="background-image:url('../Photos/MountainLion.JPG')"></div>
+          <div class="g-overlay">
+            <span class="g-cat">Wildlife</span>
+            <h3>Mountain Ghost</h3>
+            <p>Bronze · 22" L</p>
+          </div>
+        </div>
+
+        <!-- Row 2: Three standard -->
+        <div class="g-item" data-cat="coatrack">
+          <div class="g-img" style="background-image:url('../Photos/BearCoatRack.JPG')"></div>
+          <div class="g-overlay">
+            <span class="g-cat">Coat Rack</span>
+            <h3>The Bear</h3>
+            <p>Bronze Coat Rack · Functional Art</p>
+          </div>
+        </div>
+
+        <div class="g-item" data-cat="coatrack">
+          <div class="g-img" style="background-image:url('../Photos/BisonCoatRack.JPEG')"></div>
+          <div class="g-overlay">
+            <span class="g-cat">Coat Rack</span>
+            <h3>The Bison</h3>
+            <p>Bronze Coat Rack · Functional Art</p>
+          </div>
+        </div>
+
+        <div class="g-item" data-cat="western">
+          <div class="g-img" style="background-image:url('../Photos/CoalMiner.JPG')"></div>
+          <div class="g-overlay">
+            <span class="g-cat">Western</span>
+            <h3>The Coal Miner</h3>
+            <p>Bronze · Historical Series</p>
+          </div>
+        </div>
+
+        <!-- Row 3: Wide + tall stack -->
+        <div class="g-item g-wide" data-cat="coatrack">
+          <div class="g-img" style="background-image:url('../Photos/WolfCoatRack.JPG')"></div>
+          <div class="g-overlay">
+            <span class="g-cat">Coat Rack</span>
+            <h3>The Wolf</h3>
+            <p>Bronze Coat Rack · Functional Art</p>
+          </div>
+        </div>
+
+        <div class="g-item" data-cat="coatrack">
+          <div class="g-img" style="background-image:url('../Photos/MooseCoatRack.JPG')"></div>
+          <div class="g-overlay">
+            <span class="g-cat">Coat Rack</span>
+            <h3>The Moose</h3>
+            <p>Bronze Coat Rack · Functional Art</p>
+          </div>
+        </div>
+
+        <div class="g-item" data-cat="western">
+          <div class="g-img" style="background-image:url('../Photos/Santa.JPG')"></div>
+          <div class="g-overlay">
+            <span class="g-cat">Western</span>
+            <h3>St. Nicholas</h3>
+            <p>Bronze · Holiday Series</p>
+          </div>
+        </div>
+
+        <!-- Row 4: Additional works -->
+        <div class="g-item" data-cat="wildlife">
+          <div class="g-img" style="background-image:url('../Photos/DSC_5690.JPEG')"></div>
+          <div class="g-overlay">
+            <span class="g-cat">Wildlife</span>
+            <h3>High Alpine</h3>
+            <p>Bronze · 14" H</p>
+          </div>
+        </div>
+
+        <div class="g-item" data-cat="wildlife">
+          <div class="g-img" style="background-image:url('../Photos/IMG_1635.JPG')"></div>
+          <div class="g-overlay">
+            <span class="g-cat">Wildlife</span>
+            <h3>Rocky Summit</h3>
+            <p>Bronze · 16" H</p>
+          </div>
+        </div>
+
+        <div class="g-item" data-cat="wildlife">
+          <div class="g-img" style="background-image:url('../Photos/DSC_5857.JPEG')"></div>
+          <div class="g-overlay">
+            <span class="g-cat">Wildlife</span>
+            <h3>The Strike</h3>
+            <p>Bronze · 18" H</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="gallery-cta" data-reveal>
+        <p>Interested in acquiring a piece or commissioning original work?</p>
+        <a href="#contact" class="btn btn-gold">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PULL QUOTE -->
+  <section class="pullquote">
+    <div class="pq-inner" data-reveal>
+      <div class="pq-line"></div>
+      <blockquote>
+        "Every sculpture is a conversation between the artist,<br>the material, and the spirit of the West."
+      </blockquote>
+      <cite>— Scott Mortensen</cite>
+      <div class="pq-line"></div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="process-bg"></div>
+    <div class="process-inner">
+      <div class="section-header" data-reveal>
+        <p class="eyebrow center light">Craftsmanship</p>
+        <h2 class="section-h2 center light">The Art of<br><em>Bronze Casting</em></h2>
+        <p class="section-sub center light">From first sketch to finished bronze — an ancient process, a timeless result.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step" data-reveal>
+          <div class="ps-num">01</div>
+          <div class="ps-content">
+            <div class="ps-icon">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M12 36L24 10l12 26M16 28h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Concept & Sketch</h3>
+            <p>Every sculpture begins with observation — studying the subject in its natural habitat to capture authentic movement and emotion in careful sketches.</p>
+          </div>
+        </div>
+        <div class="ps-connector" data-reveal></div>
+        <div class="process-step" data-reveal>
+          <div class="ps-num">02</div>
+          <div class="ps-content">
+            <div class="ps-icon">
+              <svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="30" rx="13" ry="8" stroke="currentColor" stroke-width="1.5"/><path d="M24 22V12M17 25l-5-6M31 25l5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Clay Modeling</h3>
+            <p>The form is sculpted by hand in clay or wax — building anatomy layer by layer until every muscle, texture, and expression is perfected.</p>
+          </div>
+        </div>
+        <div class="ps-connector" data-reveal></div>
+        <div class="process-step" data-reveal>
+          <div class="ps-num">03</div>
+          <div class="ps-content">
+            <div class="ps-icon">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M15 38c0-9 4-18 9-24 5 6 9 15 9 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 38h26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="24" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h3>Lost-Wax Casting</h3>
+            <p>Using the ancient cire perdue technique, a ceramic mold is created and molten bronze is poured — a process unchanged for thousands of years.</p>
+          </div>
+        </div>
+        <div class="ps-connector" data-reveal></div>
+        <div class="process-step" data-reveal>
+          <div class="ps-num">04</div>
+          <div class="ps-content">
+            <div class="ps-icon">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M24 8l4 9 9 1-7 6 2 9-8-4-8 4 2-9-7-6 9-1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Patina & Finish</h3>
+            <p>Chemical patinas are applied with heat to achieve rich, warm bronze tones. Each piece is sealed and mounted on a hand-selected stone or wood base.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="test-inner">
+      <div class="section-header" data-reveal>
+        <p class="eyebrow center">Collectors</p>
+        <h2 class="section-h2 center">In Their Words</h2>
+      </div>
+      <div class="test-grid">
+        <div class="test-card" data-reveal>
+          <div class="t-quote-mark">"</div>
+          <p class="t-text">Scott's sculptures don't just sit on a shelf — they fill the room with energy. The detail in his wildlife pieces is extraordinary. Our bison sculpture is the centerpiece of our home.</p>
+          <div class="t-author">
+            <div class="t-bar"></div>
+            <div>
+              <span class="t-name">James &amp; Carol H.</span>
+              <span class="t-loc">Scottsdale, AZ</span>
+            </div>
+          </div>
+        </div>
+        <div class="test-card featured-test" data-reveal>
+          <div class="t-quote-mark">"</div>
+          <p class="t-text">I commissioned Scott to create a piece honoring my grandfather's ranch. What he delivered moved me to tears. His ability to translate a story into bronze is unmatched.</p>
+          <div class="t-author">
+            <div class="t-bar"></div>
+            <div>
+              <span class="t-name">Robert T.</span>
+              <span class="t-loc">Jackson Hole, WY</span>
+            </div>
+          </div>
+        </div>
+        <div class="test-card" data-reveal>
+          <div class="t-quote-mark">"</div>
+          <p class="t-text">We've collected western art for 30 years. Scott Mortensen is among the finest sculptors working today. His pieces hold their value and continue to appreciate with time.</p>
+          <div class="t-author">
+            <div class="t-bar"></div>
+            <div>
+              <span class="t-name">The Worthington Collection</span>
+              <span class="t-loc">Denver, CO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="ctab-bg" style="background-image:url('../Photos/DSC_5857.JPEG')"></div>
+    <div class="ctab-overlay"></div>
+    <div class="ctab-inner" data-reveal>
+      <p class="eyebrow light center">Commission</p>
+      <h2 class="ctab-title">Own a Piece of<br>the American West</h2>
+      <p class="ctab-sub">Custom commissions and limited editions available. Each piece is a one-of-a-kind work of art.</p>
+      <a href="#contact" class="btn btn-gold btn-lg">Begin Your Commission</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-left" data-reveal>
+        <p class="eyebrow light">Get in Touch</p>
+        <h2 class="section-h2 light">Commission a Work<br>or <em>Inquire</em></h2>
+        <p class="body-text light">Whether you're interested in an available piece, a limited edition, or a fully custom commission — Scott welcomes the conversation.</p>
+        <div class="c-details">
+          <div class="c-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span>scottmortensenfinearts@gmail.com</span>
+          </div>
+          <div class="c-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>American West · Available Nationwide</span>
+          </div>
+        </div>
+        <div class="social-row">
+          <a href="https://www.instagram.com/scottmortensenfinearts" target="_blank" class="soc-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagram
+          </a>
+          <a href="#" class="soc-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            Facebook
+          </a>
+        </div>
+      </div>
+      <div class="contact-right" data-reveal>
+        <form class="c-form" id="contactForm">
+          <div class="form-row2">
+            <div class="form-field">
+              <label>First Name</label>
+              <input type="text" name="firstName" placeholder="John" required>
+            </div>
+            <div class="form-field">
+              <label>Last Name</label>
+              <input type="text" name="lastName" placeholder="Doe" required>
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="john@example.com" required>
+          </div>
+          <div class="form-field">
+            <label>Inquiry Type</label>
+            <select name="inquiryType">
+              <option value="">Select a subject...</option>
+              <option>Commission Inquiry</option>
+              <option>Available Works</option>
+              <option>Gallery / Exhibition</option>
+              <option>General Question</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Message</label>
+            <textarea name="message" rows="5" placeholder="Tell me about the piece you have in mind..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold full-w">Send Message</button>
+          <p class="form-note">Scott typically responds within 2–3 business days.</p>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="s-icon">✓</div>
+          <h3>Message Sent</h3>
+          <p>Thank you for reaching out. Scott will be in touch with you soon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="../Photos/CoinLogo.JPG" alt="Logo" class="footer-logo-img">
+        <div class="footer-brand-text">
+          <span class="brand-name">Scott Mortensen</span>
+          <span class="brand-sub">Fine Arts</span>
+        </div>
+        <p class="footer-tagline">Capturing the Spirit of the American West in Bronze.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-soc">
+        <a href="https://www.instagram.com/scottmortensenfinearts" target="_blank">Instagram</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Scott Mortensen Fine Arts &nbsp;·&nbsp; scottmortensenfinearts.com &nbsp;·&nbsp; All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
