@@ -1189,12 +1189,12 @@ body:hover .cursor { opacity: 1; }
      (linear) so the image dissolves into the black with no hard left line.
      Intersect = a pixel shows only where BOTH layers are opaque. */
   -webkit-mask-image:
-    radial-gradient(140% 115% at 64% 43%, #000 62%, rgba(0,0,0,0) 100%),
-    linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 22%, #000 44%);
+    radial-gradient(140% 115% at 60% 43%, #000 64%, rgba(0,0,0,0) 100%),
+    linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 15%, #000 30%);
   -webkit-mask-composite: source-in;
   mask-image:
-    radial-gradient(140% 115% at 64% 43%, #000 62%, rgba(0,0,0,0) 100%),
-    linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 22%, #000 44%);
+    radial-gradient(140% 115% at 60% 43%, #000 64%, rgba(0,0,0,0) 100%),
+    linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 15%, #000 30%);
   mask-composite: intersect;
 }
 .hc-sculpture.revealed { clip-path: inset(0% 0 0 0); }
