@@ -1057,6 +1057,13 @@ a { text-decoration: none; color: inherit; }
 
   .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 260px; }
   .g-item.tall, .g-item.wide { grid-column: 1; grid-row: span 1; }
+  /* Chief in Waiting (portrait) — taller tile + contain so it's not cropped on mobile */
+  .g-item[data-cat="native"] { grid-row: span 2; }
+  .g-item[data-cat="native"] .g-img {
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   .test-grid    { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
