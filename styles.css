@@ -1045,6 +1045,12 @@ a { text-decoration: none; color: inherit; }
   .featured-visual { max-width: 520px; margin: 0 auto; }
   .gallery-grid   { grid-template-columns: repeat(2, 1fr); }
   .g-item.wide    { grid-column: span 2; }
+  /* Chief in Waiting (portrait) — never crop below desktop; show full sculpture */
+  .g-item[data-cat="native"] .g-img {
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   .contact-inner  { grid-template-columns: 1fr; }
   .footer-inner   { grid-template-columns: var(--phi-wide) 1fr; }
 }
