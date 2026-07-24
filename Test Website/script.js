@@ -318,20 +318,20 @@ window.addEventListener('load', () => {
 
   // Line definitions: y(0-1), amplitude, wave-freq, phase, speed, color, lineWidth
   const lines = [
-    { y: 0.04, amp: 0.055, freq: 0.7,  ph: 0.0,  spd: 0.18, col: 'rgba(74,46,26,0.55)',   lw: 1.1 },
-    { y: 0.11, amp: 0.035, freq: 1.3,  ph: 1.2,  spd: 0.12, col: 'rgba(58,35,15,0.42)',   lw: 0.7 },
-    { y: 0.19, amp: 0.08,  freq: 0.55, ph: 2.5,  spd: 0.22, col: 'rgba(110,67,25,0.38)',  lw: 1.7 },
-    { y: 0.27, amp: 0.03,  freq: 1.7,  ph: 0.8,  spd: 0.10, col: 'rgba(85,52,19,0.28)',   lw: 0.8 },
-    { y: 0.35, amp: 0.07,  freq: 0.9,  ph: 3.7,  spd: 0.20, col: 'rgba(140,87,32,0.32)',  lw: 2.1 },
-    { y: 0.43, amp: 0.045, freq: 1.15, ph: 1.9,  spd: 0.15, col: 'rgba(72,46,17,0.48)',   lw: 1.0 },
-    { y: 0.51, amp: 0.09,  freq: 0.65, ph: 4.2,  spd: 0.24, col: 'rgba(97,62,23,0.35)',   lw: 1.9 },
-    { y: 0.59, amp: 0.038, freq: 1.45, ph: 2.1,  spd: 0.11, col: 'rgba(60,37,14,0.40)',   lw: 0.9 },
-    { y: 0.67, amp: 0.062, freq: 0.8,  ph: 0.5,  spd: 0.19, col: 'rgba(118,74,28,0.30)',  lw: 1.4 },
-    { y: 0.75, amp: 0.05,  freq: 1.25, ph: 3.1,  spd: 0.14, col: 'rgba(78,49,18,0.44)',   lw: 1.1 },
-    { y: 0.83, amp: 0.068, freq: 0.88, ph: 1.6,  spd: 0.21, col: 'rgba(54,33,12,0.36)',   lw: 1.5 },
-    { y: 0.91, amp: 0.042, freq: 1.1,  ph: 4.8,  spd: 0.16, col: 'rgba(68,43,16,0.28)',   lw: 0.7 },
-    { y: 0.15, amp: 0.058, freq: 0.48, ph: 2.9,  spd: 0.17, col: 'rgba(102,64,24,0.22)',  lw: 2.6 },
-    { y: 0.47, amp: 0.078, freq: 1.0,  ph: 0.3,  spd: 0.23, col: 'rgba(132,82,31,0.18)',  lw: 3.1 },
+    { y: 0.04, amp: 0.055, freq: 0.7,  ph: 0.0,  spd: 0.18, col: 'rgba(120,72,40,0.55)',  lw: 1.1 },
+    { y: 0.11, amp: 0.035, freq: 1.3,  ph: 1.2,  spd: 0.12, col: 'rgba(96,58,30,0.42)',   lw: 0.7 },
+    { y: 0.19, amp: 0.08,  freq: 0.55, ph: 2.5,  spd: 0.22, col: 'rgba(170,104,56,0.38)', lw: 1.7 },
+    { y: 0.27, amp: 0.03,  freq: 1.7,  ph: 0.8,  spd: 0.10, col: 'rgba(134,82,44,0.28)',  lw: 0.8 },
+    { y: 0.35, amp: 0.07,  freq: 0.9,  ph: 3.7,  spd: 0.20, col: 'rgba(212,137,78,0.32)', lw: 2.1 },
+    { y: 0.43, amp: 0.045, freq: 1.15, ph: 1.9,  spd: 0.15, col: 'rgba(118,72,38,0.48)',  lw: 1.0 },
+    { y: 0.51, amp: 0.09,  freq: 0.65, ph: 4.2,  spd: 0.24, col: 'rgba(158,98,52,0.35)',  lw: 1.9 },
+    { y: 0.59, amp: 0.038, freq: 1.45, ph: 2.1,  spd: 0.11, col: 'rgba(100,60,32,0.40)',  lw: 0.9 },
+    { y: 0.67, amp: 0.062, freq: 0.8,  ph: 0.5,  spd: 0.19, col: 'rgba(188,116,64,0.30)', lw: 1.4 },
+    { y: 0.75, amp: 0.05,  freq: 1.25, ph: 3.1,  spd: 0.14, col: 'rgba(126,77,41,0.44)',  lw: 1.1 },
+    { y: 0.83, amp: 0.068, freq: 0.88, ph: 1.6,  spd: 0.21, col: 'rgba(92,55,28,0.36)',   lw: 1.5 },
+    { y: 0.91, amp: 0.042, freq: 1.1,  ph: 4.8,  spd: 0.16, col: 'rgba(112,68,36,0.28)',  lw: 0.7 },
+    { y: 0.15, amp: 0.058, freq: 0.48, ph: 2.9,  spd: 0.17, col: 'rgba(166,102,55,0.22)', lw: 2.6 },
+    { y: 0.47, amp: 0.078, freq: 1.0,  ph: 0.3,  spd: 0.23, col: 'rgba(200,128,72,0.18)', lw: 3.1 },
   ];
 
   const t0 = performance.now();
