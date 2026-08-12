@@ -381,13 +381,8 @@ window.addEventListener('load', () => {
       });
     });
 
-    // Radial vignette: fades lines to black at edges
-    const vg = ctx.createRadialGradient(W * 0.38, H * 0.5, W * 0.05, W * 0.38, H * 0.5, W * 0.78);
-    vg.addColorStop(0,   'rgba(10,8,6,0)');
-    vg.addColorStop(0.55,'rgba(10,8,6,0.18)');
-    vg.addColorStop(1,   'rgba(10,8,6,0.94)');
-    ctx.fillStyle = vg;
-    ctx.fillRect(0, 0, W, H);
+    // (No vignette fill — the streaks layer sits on top of the sculpture, so
+    // it must stay transparent except for the lines themselves.)
 
     requestAnimationFrame(draw);
   }
