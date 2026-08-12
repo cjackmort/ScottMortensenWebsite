@@ -1184,17 +1184,17 @@ body:hover .cursor { opacity: 1; }
   clip-path: inset(100% 0 0 0);
   transition: clip-path 2s cubic-bezier(0.16, 1, 0.3, 1);
   mix-blend-mode: normal;
-  opacity: 0.62;
+  opacity: 1;
   /* Feather the outer edges (radial) AND fade the left seam to transparent
      (linear) so the image dissolves into the black with no hard left line.
      Intersect = a pixel shows only where BOTH layers are opaque. */
   -webkit-mask-image:
     radial-gradient(140% 115% at 60% 43%, #000 64%, rgba(0,0,0,0) 100%),
-    linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 24%, rgba(0,0,0,0.4) 33%, #000 42%);
+    linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 13%, rgba(0,0,0,0.12) 20%, rgba(0,0,0,0.5) 27%, #000 34%);
   -webkit-mask-composite: source-in;
   mask-image:
     radial-gradient(140% 115% at 60% 43%, #000 64%, rgba(0,0,0,0) 100%),
-    linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 24%, rgba(0,0,0,0.4) 33%, #000 42%);
+    linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 13%, rgba(0,0,0,0.12) 20%, rgba(0,0,0,0.5) 27%, #000 34%);
   mask-composite: intersect;
 }
 .hc-sculpture.revealed { clip-path: inset(0% 0 0 0); }
