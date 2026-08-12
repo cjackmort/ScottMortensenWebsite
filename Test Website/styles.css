@@ -1200,24 +1200,13 @@ body:hover .cursor { opacity: 1; }
 /* Vignette removed per 4-layer design */
 .hc-vignette { display: none; }
 
-/* Black boxes hugging each hero text element, so the text sits on solid black
-   (hiding the image behind it) while the sculpture stays fully visible. */
-.hc-eyebrow-row {
-  width: fit-content;
-  background: #000;
-  padding: 7px 14px;
-}
-.hc-big-title .ht-line {
-  width: fit-content;
-  background: #000;
-  padding: 0.02em 0.16em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+/* Legibility: a soft dark halo hugging the hero text (no boxes) so it reads
+   over the sculpture while the image stays fully visible. */
+.hc-eyebrow {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.95), 0 0 12px rgba(0,0,0,0.85);
 }
 .hc-subtitle {
-  width: fit-content;
-  background: #000;
-  padding: 8px 14px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.92), 0 0 6px rgba(0,0,0,0.85);
 }
 
 /* Title: left column, vertically centered */
@@ -1251,8 +1240,8 @@ body:hover .cursor { opacity: 1; }
   font-size: clamp(3.6rem, 7.5vw, 7.5rem);
   font-weight: 900; color: #d4894e; line-height: 0.9;
   margin-bottom: 26px;
-  display: flex; flex-direction: column; align-items: flex-start;
-  text-shadow: 0 0 60px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.8);
+  display: flex; flex-direction: column;
+  text-shadow: 0 0 8px rgba(0,0,0,0.92), 0 0 22px rgba(0,0,0,0.82), 0 4px 30px rgba(0,0,0,0.9);
 }
 .hc-big-title em     { color: #e8a060; font-style: italic; display: inline; }
 .hc-big-title strong { color: #c47840; font-style: normal; display: inline; }
