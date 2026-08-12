@@ -1200,6 +1200,21 @@ body:hover .cursor { opacity: 1; }
 /* Vignette removed per 4-layer design */
 .hc-vignette { display: none; }
 
+/* Black scrim behind the title text: sits above the image + streaks (z5) but
+   below the text (z10), so the text zone reads as solid black and fades out
+   before the sculpture. */
+.hero-cinematic::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background: linear-gradient(to right,
+    #000 0%,
+    #000 45%,
+    rgba(0,0,0,0) 64%);
+}
+
 /* Title: left column, vertically centered */
 .hc-title-wrap {
   position: absolute;
