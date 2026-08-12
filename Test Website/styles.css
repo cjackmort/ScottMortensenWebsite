@@ -1200,19 +1200,24 @@ body:hover .cursor { opacity: 1; }
 /* Vignette removed per 4-layer design */
 .hc-vignette { display: none; }
 
-/* Black scrim behind the title text: sits above the image + streaks (z5) but
-   below the text (z10), so the text zone reads as solid black and fades out
-   before the sculpture. */
-.hero-cinematic::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 5;
-  pointer-events: none;
-  background: linear-gradient(to right,
-    #000 0%,
-    #000 45%,
-    rgba(0,0,0,0) 64%);
+/* Black boxes hugging each hero text element, so the text sits on solid black
+   (hiding the image behind it) while the sculpture stays fully visible. */
+.hc-eyebrow-row {
+  width: fit-content;
+  background: #000;
+  padding: 7px 14px;
+}
+.hc-big-title .ht-line {
+  width: fit-content;
+  background: #000;
+  padding: 0.02em 0.16em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.hc-subtitle {
+  width: fit-content;
+  background: #000;
+  padding: 8px 14px;
 }
 
 /* Title: left column, vertically centered */
@@ -1246,7 +1251,7 @@ body:hover .cursor { opacity: 1; }
   font-size: clamp(3.6rem, 7.5vw, 7.5rem);
   font-weight: 900; color: #d4894e; line-height: 0.9;
   margin-bottom: 26px;
-  display: flex; flex-direction: column;
+  display: flex; flex-direction: column; align-items: flex-start;
   text-shadow: 0 0 60px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.8);
 }
 .hc-big-title em     { color: #e8a060; font-style: italic; display: inline; }
