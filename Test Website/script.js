@@ -420,6 +420,33 @@ document.querySelectorAll('a[href^="#"]').forEach(a =>
   })
 );
 
+/* ---------- REVEAL FAIL-SAFE ----------
+   IntersectionObserver reveals can stall (background/non-composited tabs,
+   throttling), leaving [data-reveal]/.g-item content permanently clipped.
+   This sweep reveals anything in (or above) the viewport on load + scroll,
+   so content is never stuck hidden. It only ADDS classes, so it composes
+   safely with the observers above. */
+(function revealFailsafe() {
+  const inView = el => el.getBoundingClientRect().top < window.innerHeight * 0.92;
+  function sweep(all) {
+    document.querySelectorAll('[data-reveal]:not(.revealed)').forEach(el => { if (all || inView(el)) el.classList.add('revealed'); });
+    document.querySelectorAll('.g-item:not(.g-revealed)').forEach(el => { if (all || inView(el)) el.classList.add('g-revealed'); });
+    document.querySelectorAll('.process-step:not(.ps-in)').forEach(el => { if (all || inView(el)) el.classList.add('ps-in'); });
+    document.querySelectorAll('.pq-inner:not(.revealed)').forEach(el => { if (all || inView(el)) el.classList.add('revealed'); });
+    document.querySelectorAll('[data-count]').forEach(el => { if ((all || inView(el)) && el.textContent.trim() === '0') el.textContent = el.getAttribute('data-count'); });
+  }
+  const showAll = () => sweep(true);
+  sweep(false);
+  window.addEventListener('load', () => { sweep(false); setTimeout(() => sweep(false), 300); });
+  window.addEventListener('scroll', () => sweep(false), { passive: true });
+  window.addEventListener('resize', () => sweep(false), { passive: true });
+  window.addEventListener('visibilitychange', () => { if (!document.hidden) sweep(false); });
+  // Hard fallback: hidden/throttled tabs (or missing IntersectionObserver) freeze
+  // the observers, leaving content clipped. In that case just show everything so
+  // content is never stuck hidden. (Visible tabs keep the scroll-reveal animation.)
+  if (document.hidden || !('IntersectionObserver' in window)) showAll();
+})();
+
 /* ---------- CTA BAND PARALLAX ---------- */
 const ctabBg   = document.querySelector('.ctab-bg');
 const ctaBand  = ctabBg?.closest('.cta-band');

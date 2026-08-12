@@ -31,7 +31,18 @@
   --ease2: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-html { scroll-behavior: smooth; overflow-x: clip; }
+html { scroll-behavior: smooth; overflow-x: clip; scrollbar-color: var(--copper) var(--bg2); scrollbar-width: thin; }
+
+/* Themed scrollbar (matches the copper landing-page palette) */
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb {
+  background: var(--copper);
+  border-radius: 8px;
+  border: 3px solid var(--bg2);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--copper2); }
+::selection { background: var(--copper); color: var(--bg); }
 
 body {
   background: var(--bg);
