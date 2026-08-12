@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commission · Scott Mortensen Fine Arts</title>
+  <meta name="description" content="Commission a bronze sculpture or inquire about available works by Scott Mortensen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage">
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="../Photos/CoinLogo.JPG" alt="Scott Mortensen Logo" class="nav-logo-img">
+        <div class="brand-text">
+          <span class="brand-name">Scott Mortensen</span>
+          <span class="brand-sub">Fine Arts</span>
+        </div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="process.html" class="nav-link">Process</a>
+        <a href="contact.html" class="nav-link nav-cta">Commission</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="gallery.html" class="mobile-link">Gallery</a>
+      <a href="process.html" class="mobile-link">Process</a>
+      <a href="contact.html" class="mobile-link">Commission</a>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <p class="eyebrow center">Get in Touch</p>
+    <h1 class="page-title">Commission a Work<br>or <em>Inquire</em></h1>
+    <p class="page-sub">Whether it's an available piece, a limited edition, or a fully custom commission — Scott welcomes the conversation.</p>
+  </header>
+
+  <main>
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="contact-inner">
+        <div class="contact-left" data-reveal>
+          <p class="eyebrow light">Get in Touch</p>
+          <h2 class="section-h2 light">Commission a Work<br>or <em>Inquire</em></h2>
+          <p class="body-text light">Whether you're interested in an available piece, a limited edition, or a fully custom commission — Scott welcomes the conversation.</p>
+          <div class="c-details">
+            <div class="c-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>scottmortensenfinearts@gmail.com</span>
+            </div>
+            <div class="c-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>American West · Available Nationwide</span>
+            </div>
+          </div>
+          <div class="social-row">
+            <a href="https://www.instagram.com/scottmortensenfinearts" target="_blank" class="soc-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Instagram
+            </a>
+            <a href="#" class="soc-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              Facebook
+            </a>
+          </div>
+        </div>
+        <div class="contact-right" data-reveal>
+          <form class="c-form" id="contactForm">
+            <div class="form-row2">
+              <div class="form-field">
+                <label>First Name</label>
+                <input type="text" name="firstName" placeholder="John" required>
+              </div>
+              <div class="form-field">
+                <label>Last Name</label>
+                <input type="text" name="lastName" placeholder="Doe" required>
+              </div>
+            </div>
+            <div class="form-field">
+              <label>Email Address</label>
+              <input type="email" name="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-field">
+              <label>Inquiry Type</label>
+              <select name="inquiryType">
+                <option value="">Select a subject...</option>
+                <option>Commission Inquiry</option>
+                <option>Available Works</option>
+                <option>Gallery / Exhibition</option>
+                <option>General Question</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label>Message</label>
+              <textarea name="message" rows="5" placeholder="Tell me about the piece you have in mind..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold full-w">Send Message</button>
+            <p class="form-note">Scott typically responds within 2–3 business days.</p>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="s-icon">✓</div>
+            <h3>Message Sent</h3>
+            <p>Thank you for reaching out. Scott will be in touch with you soon.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="../Photos/CoinLogo.JPG" alt="Logo" class="footer-logo-img">
+        <div class="footer-brand-text">
+          <span class="brand-name">Scott Mortensen</span>
+          <span class="brand-sub">Fine Arts</span>
+        </div>
+        <p class="footer-tagline">Capturing the Spirit of the American West in Bronze.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="process.html">Process</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-soc">
+        <a href="https://www.instagram.com/scottmortensenfinearts" target="_blank">Instagram</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Scott Mortensen Fine Arts &nbsp;·&nbsp; scottmortensenfinearts.com &nbsp;·&nbsp; All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

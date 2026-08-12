@@ -1284,3 +1284,57 @@ body:hover .cursor { opacity: 1; }
   }
   .hc-big-title { font-size: clamp(2.8rem, 13vw, 5rem); }
 }
+
+/* ============================================================
+   SUB-PAGES (about / gallery / process / contact)
+   ============================================================ */
+body.subpage { background: var(--bg); }
+
+/* Solid nav on sub-pages (no hero sitting behind it) */
+body.subpage .nav {
+  background: rgba(10,8,6,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+/* Page-title band under the nav */
+.page-hero {
+  position: relative;
+  padding: calc(var(--nav-h) + 76px) 40px 58px;
+  text-align: center;
+  background:
+    radial-gradient(120% 150% at 50% 0%, rgba(212,137,78,0.12) 0%, transparent 62%),
+    linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.page-hero .eyebrow { margin-bottom: 14px; }
+.page-title {
+  font-family: var(--ff-serif);
+  font-weight: 700; line-height: 1.04;
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  color: var(--white);
+}
+.page-title em { color: var(--gold); font-style: italic; }
+.page-sub {
+  font-family: var(--ff-cond);
+  font-size: 1.15rem; font-weight: 300;
+  color: var(--muted);
+  margin: 16px auto 0; max-width: 580px;
+}
+
+/* Sub-pages are single sections — drop the homepage scroll-stacking shadow */
+body.subpage .about,
+body.subpage .gallery,
+body.subpage .process,
+body.subpage .contact { box-shadow: none; }
+body.subpage main > section { position: relative; z-index: auto; }
+
+/* Active nav item for the current page */
+.nav-link.active { color: var(--white); }
+.nav-link.active::after { transform: scaleX(1); transform-origin: left; }
+
+@media (max-width: 768px) {
+  .page-hero { padding: calc(var(--nav-h) + 48px) 24px 40px; }
+}
