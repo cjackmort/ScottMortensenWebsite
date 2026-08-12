@@ -1190,11 +1190,11 @@ body:hover .cursor { opacity: 1; }
      Intersect = a pixel shows only where BOTH layers are opaque. */
   -webkit-mask-image:
     radial-gradient(140% 115% at 60% 43%, #000 64%, rgba(0,0,0,0) 100%),
-    linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 13%, rgba(0,0,0,0.12) 20%, rgba(0,0,0,0.5) 27%, #000 34%);
+    linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 24%, rgba(0,0,0,0.4) 33%, #000 42%);
   -webkit-mask-composite: source-in;
   mask-image:
     radial-gradient(140% 115% at 60% 43%, #000 64%, rgba(0,0,0,0) 100%),
-    linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 13%, rgba(0,0,0,0.12) 20%, rgba(0,0,0,0.5) 27%, #000 34%);
+    linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 24%, rgba(0,0,0,0.4) 33%, #000 42%);
   mask-composite: intersect;
 }
 .hc-sculpture.revealed { clip-path: inset(0% 0 0 0); }
