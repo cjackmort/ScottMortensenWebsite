@@ -281,7 +281,7 @@ if (contactForm) {
     const btn = contactForm.querySelector('button[type="submit"]');
     const orig = btn.textContent; btn.textContent = 'Sending…'; btn.disabled = true;
     try {
-      const res = await fetch('https://formspree.io/f/xdkozpvr', {
+      const res = await fetch('https://formspree.io/f/xaewbako', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(Object.fromEntries(new FormData(contactForm))),
@@ -410,7 +410,7 @@ window.addEventListener('load', () => {
       titleWrap.style.transform = `translateY(${-p * 70}px)`;
     }
     if (sculpture) {
-      sculpture.style.transform = `scale(${1 + p * 0.07})`;
+      sculpture.style.transform = `translateY(-50%) scale(${1 + p * 0.07})`;
     }
   }, { passive: true });
 })();
