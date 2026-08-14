@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="styles.css?v=2">
   <!-- The hero sculpture is a CSS background, so the browser can't discover it
        until styles.css parses. Preloading starts the fetch immediately. -->
-  <link rel="preload" as="image" href="Photos/web/Indian.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="Photos/web/CoinLogo.jpg" fetchpriority="high">
 </head>
 <body>
 
@@ -72,7 +72,14 @@
 
     <!-- Indian sculpture — slides up from below on load -->
     <div class="hc-sculpture" id="hcSculpture"
-         style="background-image:url('Photos/web/Indian.jpg')"></div>
+         style="top:47%; right:8%; left:auto; width:min(72vw,92vh); height:min(72vw,92vh); transform:translateY(-50%);
+                background-image:url('Photos/web/CoinLogo.jpg');
+                background-size:116%; background-position:center; background-repeat:no-repeat;
+                border-radius:50%;
+                -webkit-mask-image: radial-gradient(circle at center, black 0%, black 74%, transparent 96%);
+                mask-image: radial-gradient(circle at center, black 0%, black 74%, transparent 96%);
+                filter: brightness(0.27) sepia(1) saturate(2.5) hue-rotate(-10deg) contrast(1.15);
+                mix-blend-mode: screen; opacity:0.9"></div>
 
     <!-- Gradient vignette: blends sculpture left + top + bottom into black -->
     <div class="hc-vignette"></div>
@@ -169,14 +176,6 @@
         <h2 class="section-h2 center">The Work</h2>
         <p class="section-sub center">Each piece tells the story of the West — its wildlife, its people, its enduring spirit.</p>
       </div>
-      <div class="gallery-filters" data-reveal>
-        <button class="filter-btn active" data-filter="all">All Works</button>
-        <button class="filter-btn" data-filter="wildlife">Wildlife</button>
-        <button class="filter-btn" data-filter="western">Western</button>
-        <button class="filter-btn" data-filter="coatrack">Coat Racks</button>
-        <button class="filter-btn" data-filter="native">Native Heritage</button>
-      </div>
-
       <!-- Gallery Grid -->
       <div class="gallery-grid" id="galleryGrid">
 
@@ -214,15 +213,6 @@
             <span class="g-cat">Wildlife</span>
             <h3>I See You</h3>
             <p>Patinated Bronze · Limited Edition</p>
-          </div>
-        </div>
-
-        <div class="g-item" data-cat="wildlife">
-          <div class="g-img" style="--img:url('Photos/web/ProngHornColor-800.jpg')"></div>
-          <div class="g-overlay">
-            <span class="g-cat">Wildlife</span>
-            <h3>I See You</h3>
-            <p>Painted Bronze · Limited Edition</p>
           </div>
         </div>
 
@@ -477,10 +467,6 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             Instagram
           </a>
-          <a href="#" class="soc-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-            Facebook
-          </a>
         </div>
       </div>
       <div class="contact-right" data-reveal>
@@ -544,7 +530,6 @@
       </nav>
       <div class="footer-soc">
         <a href="https://www.instagram.com/scottmortensenfinearts" target="_blank">Instagram</a>
-        <a href="#">Facebook</a>
       </div>
     </div>
     <div class="footer-bottom">
