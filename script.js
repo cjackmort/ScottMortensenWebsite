@@ -410,7 +410,7 @@ window.addEventListener('load', () => {
       titleWrap.style.transform = `translateY(${-p * 70}px)`;
     }
     if (sculpture) {
-      sculpture.style.transform = `translateY(-50%) scale(${1 + p * 0.07})`;
+      sculpture.style.transform = `translate(-50%,-50%) scale(${1 + p * 0.07})`;
     }
   }, { passive: true });
 })();
