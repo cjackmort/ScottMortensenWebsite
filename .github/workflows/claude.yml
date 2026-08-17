@@ -30,6 +30,12 @@ permissions:
   contents: write
   pull-requests: write
   issues: write
+  # Required by claude-code-action, which exchanges a GitHub OIDC token for
+  # its own credentials. Without it every run fails on the first step with
+  # "Could not fetch an OIDC token" — after the issue has been opened and the
+  # portal already believes work has started, so the request sits on "being
+  # worked on" until the watchdog fails it half an hour later.
+  id-token: write
 
 jobs:
   implement:
