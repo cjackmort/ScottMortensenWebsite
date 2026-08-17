@@ -1,0 +1,53 @@
+# Netlify configuration.
+#
+# There is no build step. The site is hand-written HTML at the repository root,
+# so `publish = "."` serves the files exactly as committed — the same thing
+# GitHub Pages did, which is what makes this migration a change of host rather
+# than a change of site.
+#
+# `old/` is published deliberately. It is the previous single-page design, kept
+# reachable at /old/ so it is not lost, and it reads shared photographs via
+# ../Photos/.
+
+[build]
+  publish = "."
+
+# Deploy previews are the reason for moving here. Every pull request gets its
+# own URL, which replaces the sibling `-preview` repository and the manual
+# porting of approved changes back to this one.
+[context.deploy-preview]
+  publish = "."
+
+[context.branch-deploy]
+  publish = "."
+
+# ---- Caching ----------------------------------------------------------------
+# Photographs are the bulk of this site and never change once committed — a new
+# photograph gets a new filename rather than replacing an old one. A long cache
+# is therefore safe, and it is what makes a gallery page load quickly on a
+# second visit.
+
+[[headers]]
+  for = "/Photos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML is not cached. A page whose content changed must show the change on the
+# next visit, and these files are small enough that revalidating costs nothing
+# worth measuring.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ---- Security ---------------------------------------------------------------
+# Modest and uncontroversial. No CSP: this site loads a Google Fonts stylesheet
+# and inline styles, and a policy written without testing against every page
+# would silently break one of them. Worth adding deliberately later.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
