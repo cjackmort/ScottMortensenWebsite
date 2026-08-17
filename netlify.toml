@@ -12,6 +12,15 @@
 [build]
   publish = "."
 
+  # Skip the build when nothing a visitor could see has changed.
+  #
+  # Netlify skips when this exits 0, and `git diff --quiet` exits 0 when there
+  # is no difference — so it reads as: if nothing outside .github and Markdown
+  # changed, there is nothing to publish. Every push to master otherwise costs a
+  # production deploy, and this repository takes more workflow-only commits than
+  # most, because the agent's workflow lives here.
+  ignore = "git diff --quiet HEAD^ HEAD -- . ':(exclude).github' ':(exclude)*.md'"
+
 # Deploy previews are the reason for moving here. Every pull request gets its
 # own URL, which replaces the sibling `-preview` repository and the manual
 # porting of approved changes back to this one.
