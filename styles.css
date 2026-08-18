@@ -186,8 +186,6 @@ body:hover .cursor { opacity: 1; }
   height: var(--nav-h);
   transition: background 0.4s var(--ease), backdrop-filter 0.4s, box-shadow 0.4s, transform 0.45s var(--ease2);
 }
-.nav.nav-hidden  { transform: translateY(-100%); }
-.nav.nav-visible { transform: translateY(0); }
 .nav.scrolled {
   background: rgba(10,8,6,0.88);
   backdrop-filter: blur(20px);
