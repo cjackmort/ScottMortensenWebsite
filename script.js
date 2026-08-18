@@ -47,19 +47,10 @@ document.querySelectorAll('a, button, .g-item, .filter-btn, .test-card, .nav-cta
   });
 });
 
-/* ---------- NAV — hide on scroll down, reveal on scroll up ---------- */
+/* ---------- NAV — always stays visible while scrolling ---------- */
 const nav = document.getElementById('nav');
-let prevScrollY = 0;
 window.addEventListener('scroll', () => {
-  const y = window.scrollY;
-  nav.classList.toggle('scrolled', y > 60);
-  if (y > 120) {
-    nav.classList.toggle('nav-hidden',  y > prevScrollY + 4);
-    nav.classList.toggle('nav-visible', y < prevScrollY - 4);
-  } else {
-    nav.classList.remove('nav-hidden', 'nav-visible');
-  }
-  prevScrollY = y;
+  nav.classList.toggle('scrolled', window.scrollY > 60);
 }, { passive: true });
 
 /* ---------- MOBILE MENU ---------- */
