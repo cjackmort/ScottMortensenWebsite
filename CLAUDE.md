@@ -23,6 +23,29 @@ step in this repo.
     `tools/optimize-images.ps1` (1600px + 800px variants, ~150–250 KB each).
     All current-design pages reference these. Regenerate after adding new
     photos to `Photos/`: `powershell -ExecutionPolicy Bypass -File tools/optimize-images.ps1`
+
+### A photo a client uploaded through the portal
+
+The workflow tells you to download attached photos into "the repository's image
+directory". For this repository that is **`Photos/web/`**, not `Photos/`, and
+not the `src/images/` the generic instruction names.
+
+```bash
+curl -fsSL -o Photos/web/<name>.jpg "<download URL>"
+```
+
+`Photos/` holds 36-megapixel originals and nothing in the current design may
+reference them — a 15 MB image on a gallery page would tank the load time the
+site is built around. Portal uploads arrive already resized to roughly the same
+1600px that `optimize-images.ps1` produces, so `Photos/web/` is where they
+belong and no processing is needed.
+
+**Do not try to run `tools/optimize-images.ps1`.** It is PowerShell and the
+agent runs on Ubuntu; the run will fail. If a page needs the `-800.jpg` variant
+for a `srcset`, reference the single file you committed and say in the pull
+request that the 800px version has not been generated, so it can be produced
+later on a Windows machine.
+
 - `server.js` — local static server for previewing (gitignored, not used by
   Pages). Run with `node server.js`, defaults to port 3000, honors `$PORT`.
 
