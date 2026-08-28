@@ -1220,15 +1220,17 @@ body:hover .cursor { opacity: 1; }
   z-index: 2; pointer-events: none; display: block;
 }
 
-/* LAYER 2: sculpture (Chief in Waiting) — fully visible, just behind the
-   streaks/text. Only the empty left backdrop of the photo feathers into the
-   brown base gradient; the Indian itself is never masked. */
+/* LAYER 2: sculpture (Chief in Waiting) — shown in full, uncropped, toward
+   the right side of the hero. Only the empty left backdrop of the photo
+   feathers into the brown base gradient; the Indian itself is never masked. */
 .hc-sculpture {
   position: absolute;
   top: 6%; right: 0;
   width: 68%; height: 100%;
-  background-size: cover;
-  background-position: center 28%;
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  filter: brightness(1.15);
   z-index: 1;
   clip-path: inset(100% 0 0 0);
   transition: clip-path 2s cubic-bezier(0.16, 1, 0.3, 1);
