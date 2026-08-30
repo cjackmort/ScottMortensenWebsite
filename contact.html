@@ -154,5 +154,16 @@
   </footer>
 
   <script src="script.js?v=3"></script>
+  <script>
+    // Prefill the inquiry when arriving from a piece page's "Inquire" button.
+    (function () {
+      const piece = new URLSearchParams(location.search).get('piece');
+      if (!piece) return;
+      const msg = document.querySelector('textarea[name="message"]');
+      const type = document.querySelector('select[name="inquiryType"]');
+      if (msg) msg.value = `I'm interested in "${piece}". `;
+      if (type) type.value = 'Available Works';
+    })();
+  </script>
 </body>
 </html>

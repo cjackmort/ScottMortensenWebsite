@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pieceTabTitle">Piece · Scott Mortensen Fine Arts</title>
+  <meta id="pieceMetaDesc" name="description" content="Original bronze sculpture by Scott Mortensen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2">
+  <script defer src="https://cloud.umami.is/script.js"
+          data-website-id="4f5eaf4e-5e3e-4545-b742-d2fb05e1a911"></script>
+</head>
+<body class="subpage">
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="Photos/web/CoinLogo-logo.jpg" width="240" height="240" decoding="async" alt="Scott Mortensen Logo" class="nav-logo-img">
+        <div class="brand-text">
+          <span class="brand-name">Scott Mortensen</span>
+          <span class="brand-sub">Fine Arts</span>
+        </div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="process.html" class="nav-link">Process</a>
+        <a href="contact.html" class="nav-link nav-cta">Commission</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="gallery.html" class="mobile-link">Gallery</a>
+      <a href="process.html" class="mobile-link">Process</a>
+      <a href="contact.html" class="mobile-link">Commission</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="piece">
+      <div class="piece-inner">
+        <a href="gallery.html" class="piece-back">&larr; All works</a>
+
+        <div class="piece-grid">
+          <figure class="piece-media">
+            <img id="pieceImg" src="" alt="">
+          </figure>
+
+          <div class="piece-info">
+            <span class="g-cat" id="pieceCat"></span>
+            <h1 class="piece-title" id="pieceTitle"></h1>
+            <p class="piece-price" id="piecePrice"></p>
+            <p class="body-text light" id="pieceDesc"></p>
+
+            <dl class="piece-spec" id="pieceSpec"></dl>
+
+            <a class="btn btn-gold full-w" id="pieceBuyBtn" href="contact.html">Inquire</a>
+            <p class="piece-note" id="pieceNote"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="Photos/web/CoinLogo-logo.jpg" width="240" height="240" decoding="async" alt="Logo" class="footer-logo-img">
+        <div class="footer-brand-text">
+          <span class="brand-name">Scott Mortensen</span>
+          <span class="brand-sub">Fine Arts</span>
+        </div>
+        <p class="footer-tagline">Capturing the Spirit of the American West in Bronze.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="process.html">Process</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-soc">
+        <a href="https://www.instagram.com/scottmortensenfinearts" target="_blank">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Scott Mortensen Fine Arts &nbsp;·&nbsp; scottmortensenfinearts.com &nbsp;·&nbsp; All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="pieces-data.js?v=1"></script>
+  <script src="script.js?v=3"></script>
+  <script src="piece.js?v=1"></script>
+</body>
+</html>

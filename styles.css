@@ -509,7 +509,7 @@ body:hover .cursor { opacity: 1; }
 /* ---------- GALLERY ---------- */
 .gallery {
   padding: 100px 40px 120px;
-  background: var(--bg);
+  background: var(--bg2);
 }
 .gallery-inner { max-width: 1400px; margin: 0 auto; }
 
@@ -540,14 +540,18 @@ body:hover .cursor { opacity: 1; }
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 32px 28px;
   transition: opacity 0.3s;
 }
 .g-item {
   position: relative; overflow: hidden;
   aspect-ratio: 3/4;
-  border-radius: 2px;
-  transition: opacity 0.4s var(--ease2), transform 0.4s var(--ease2);
+  border-radius: 6px;
+  box-shadow:
+    0 0 0 1px rgba(212,137,78,0.12),
+    0 24px 50px -16px rgba(0,0,0,0.75),
+    0 8px 20px rgba(0,0,0,0.45);
+  transition: opacity 0.4s var(--ease2), transform 0.4s var(--ease2), box-shadow 0.4s var(--ease);
 }
 .g-item.g-feature {
   grid-column: span 1;
@@ -612,6 +616,18 @@ body:hover .cursor { opacity: 1; }
   font-size: 0.9rem; font-weight: 400;
   color: rgba(244,236,216,0.85);
 }
+.g-price {
+  display: block;
+  font-family: var(--ff-serif);
+  font-size: 1.05rem; font-weight: 700;
+  color: var(--gold2); margin-top: 8px;
+}
+/* .g-item is wrapped in a link in gallery.html/index.html so each tile opens
+   its own piece page. display:contents drops the anchor from the box tree
+   so .g-item stays the direct grid child (grid-column/aspect-ratio rules
+   above target .g-item, not the wrapper) while the click/nav still works
+   since the click bubbles up through the anchor regardless of its display. */
+a.g-link { display: contents; }
 
 /* Filtering hidden state */
 .g-item.hidden {
@@ -626,6 +642,61 @@ body:hover .cursor { opacity: 1; }
   font-family: var(--ff-cond);
   font-size: 1.15rem; font-weight: 400;
   color: var(--muted); margin-bottom: 20px;
+}
+
+/* ---------- PIECE (standalone product page) ---------- */
+.piece {
+  padding: calc(var(--nav-h) + 64px) 40px 120px;
+  background: var(--bg);
+}
+.piece-inner { max-width: 1200px; margin: 0 auto; position: relative; }
+.piece-back {
+  display: inline-block;
+  font-family: var(--ff-sans);
+  font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 32px;
+  transition: color 0.3s var(--ease);
+}
+.piece-back:hover { color: var(--gold); }
+
+.piece-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+}
+.piece-media {
+  position: relative; overflow: hidden; border-radius: 2px;
+  background: var(--surface);
+}
+.piece-media img { width: 100%; height: auto; }
+
+.piece-title {
+  font-family: var(--ff-serif);
+  font-weight: 700; line-height: 1.08;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  color: var(--white); margin: 8px 0 14px;
+}
+.piece-price {
+  font-family: var(--ff-serif);
+  font-size: 1.6rem; color: var(--gold2); margin-bottom: 22px;
+}
+.piece-spec {
+  margin: 24px 0 28px;
+  border-top: 1px solid var(--border);
+}
+.piece-spec > div {
+  display: flex; justify-content: space-between; gap: 16px;
+  padding: 14px 0; border-bottom: 1px solid var(--border);
+}
+.piece-spec dt {
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted); flex-shrink: 0;
+}
+.piece-spec dd { color: var(--cream); font-weight: 500; text-align: right; }
+
+.piece-note { font-size: 0.85rem; color: var(--muted); margin-top: 14px; }
+
+@media (max-width: 860px) {
+  .piece-grid { grid-template-columns: 1fr; gap: 32px; }
+  .piece-back { position: static; }
 }
 
 /* ---------- PULL QUOTE ---------- */
