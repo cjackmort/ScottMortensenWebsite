@@ -133,7 +133,7 @@ const PIECES = [
   },
   {
     id: 'the-elk',
-    title: 'The Elk',
+    title: 'The Pronghorn',
     category: 'Coat Rack',
     medium: 'Bronze Coat Rack',
     edition: 'Functional Art',
